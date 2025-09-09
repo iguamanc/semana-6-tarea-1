@@ -1,0 +1,72 @@
+<div class="container">
+  <h1>{{ titulo_formulario }}</h1>
+  <form [formGroup]="usuarioforms" (ngSubmit)="guardarUsuario()" novalidate>
+    <div class="form-group">
+      <label for="nombre">Nombres</label>
+      <input
+        formControlName="nombre"
+        type="text"
+        class="form-control"
+        id="nombre"
+        placeholder="Nombre"
+      />
+      <div
+        class="invalid-feedback d-block"
+        *ngIf="
+          usuarioforms.get('nombre')?.touched &&
+          usuarioforms.get('nombre')?.invalid
+        "
+      >
+        El nombre es requerido.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="correo">Email</label>
+      <input
+        type="email"
+        formControlName="correo"
+        class="form-control"
+        id="correo"
+        placeholder="correo"
+      />
+            <div
+        class="invalid-feedback d-block"
+        *ngIf="
+          usuarioforms.get('correo')?.touched &&
+          usuarioforms.get('correo')?.invalid
+        "
+      >
+        El correo es requerido.
+      </div>
+    </div>
+        <div class="form-group">
+      <label for="pwd">Contraeña</label>
+      <input
+        formControlName="pwd"
+        type="text"
+        class="form-control"
+        id="pwd"
+        placeholder="Contraseña"
+        maxlength="10"
+      />
+           <div
+        class="invalid-feedback d-block"
+        *ngIf="
+          usuarioforms.get('pwd')?.touched &&
+          usuarioforms.get('pwd')?.invalid
+        "
+      >
+        La contraseña es requerida.
+      </div>
+    </div>
+    <button
+      type="submit"
+      class="btn btn-primary me-2 mt-2"
+      [disabled]="!usuarioforms.valid"
+    >
+      Guardar
+    </button>
+
+    <button class="btn btn-secondary mt-2" routerLink="/admin/usuario">Cancelar</button>
+  </form>
+</div>

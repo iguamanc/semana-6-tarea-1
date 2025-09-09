@@ -1,0 +1,28 @@
+.login-page {
+  background: linear-gradient(135deg, #d1d1d8, #00bcd4);
+  color: #333;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  background-color: #eceaeacc; /* ligeramente transparente */
+  border: none;
+}
+
+.btn-primary {
+  background: #00bcd4;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #04d9f5;
+}
+
+.form-control:focus {
+  border-color: #00bcd4;
+  box-shadow: 0 0 0 0.2rem rgba(19, 115, 240, 0.25);
+}
+.text-primary{
+  color: #00bcd4 !important;
+}

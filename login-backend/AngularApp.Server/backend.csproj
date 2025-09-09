@@ -1,0 +1,97 @@
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{5ADA2BB6-BD8A-FBBA-631C-E748BB1D8E69}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>ConsoleApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>backend</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".vs\AngularApp\config\applicationhost.config" />
+    <None Include=".vs\AngularApp\CopilotIndices\17.14.878.3237\CodeChunks.db" />
+    <None Include=".vs\AngularApp\CopilotIndices\17.14.878.3237\SemanticSymbols.db" />
+    <None Include=".vs\AngularApp\CopilotIndices\17.14.995.13737\CodeChunks.db" />
+    <None Include=".vs\AngularApp\CopilotIndices\17.14.995.13737\CodeChunks.db-shm" />
+    <None Include=".vs\AngularApp\CopilotIndices\17.14.995.13737\CodeChunks.db-wal" />
+    <None Include=".vs\AngularApp\CopilotIndices\17.14.995.13737\SemanticSymbols.db" />
+    <None Include=".vs\AngularApp\CopilotIndices\17.14.995.13737\SemanticSymbols.db-shm" />
+    <None Include=".vs\AngularApp\CopilotIndices\17.14.995.13737\SemanticSymbols.db-wal" />
+    <None Include=".vs\AngularApp\DesignTimeBuild\.dtbcache.v2" />
+    <None Include=".vs\AngularApp\FileContentIndex\892c7112-f237-4676-9408-a2c52d113a55.vsidx" />
+    <None Include=".vs\AngularApp\v17\.futdcache.v2" />
+    <None Include=".vs\AngularApp\v17\.suo" />
+    <None Include=".vs\AngularApp\v17\.wsuo" />
+    <None Include=".vs\AngularApp\v17\DocumentLayout.backup.json" />
+    <None Include=".vs\AngularApp\v17\DocumentLayout.json" />
+    <None Include=".vs\ProjectEvaluation\angularapp.metadata.v9.bin" />
+    <None Include=".vs\ProjectEvaluation\angularapp.projects.v9.bin" />
+    <None Include=".vs\ProjectEvaluation\angularapp.strings.v9.bin" />
+    <None Include=".vs\slnx.sqlite" />
+    <None Include="AngularApp.Server.http" />
+    <None Include="appsettings.Development.json" />
+    <None Include="appsettings.json" />
+    <None Include="CHANGELOG.md" />
+    <None Include="Properties\launchSettings.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\AutenticacionController.cs" />
+    <Compile Include="Controllers\ClientesController.cs" />
+    <Compile Include="Controllers\UsuariosController.cs" />
+    <Compile Include="Controllers\WeatherForecastController.cs" />
+    <Compile Include="Data\DataSeeder.cs" />
+    <Compile Include="Data\ServerDbContext.cs" />
+    <Compile Include="DTOs\LoginDto.cs" />
+    <Compile Include="Migrations\20250906162720_InitialCreate.cs" />
+    <Compile Include="Migrations\20250906162720_InitialCreate.Designer.cs">
+      <DependentUpon>20250906162720_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\ServerDbContextModelSnapshot.cs" />
+    <Compile Include="Model\ClientesModel.cs" />
+    <Compile Include="Model\UsuariosModel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="WeatherForecast.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".vs\backend\v17\" />
+    <Folder Include="AngularApp.Server\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,45 @@
+<div class="container-md">
+  <div class="row">
+    <button
+      type="button"
+      class="btn btn-primary mb-3 "
+      style="width: 200px;"
+      routerLink="/admin/nuevo-usuario"
+    >
+      Nuevo Usuario
+    </button>
+
+    <div class="header">
+      <h1>Lista de usuarios</h1>
+    </div>
+  </div>
+  <div class="row">
+    <table class="table table-responsive table-bordered">
+      <thead class="table-responsive">
+        <tr>
+          <th>#</th>
+          <th>Nombres</th>
+          <th>Correo</th>
+          <th>Opciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cliente of lista_usuarios$; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ cliente.nombre }}</td>
+          <td>{{ cliente.correo }}</td>
+          <td>
+          <button class="btn btn-outline-success me-2" routerLink="/admin/editar-usuario/{{ cliente.id }}">
+            Editar
+            </button>
+            <button class="btn btn-outline-danger" (click)="eliminarUsuario(cliente!)">
+            Eliminar
+            </button>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
